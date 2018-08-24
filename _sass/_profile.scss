@@ -20,18 +20,39 @@
         margin-top: 0;
         margin-bottom: 10px;
     }
-    table {
-        border-collapse: collapse;
-        width: 100%;
 
-        .date { width: 19%; }
-        .announcement { width: 81%; }
+    ol {
+        padding: 0;
+        list-style: none;
 
-        tr { text-align: left; }
-        td {
-            padding: 6px 0;
-            vertical-align: top;
-            border: none;
+        li {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            padding: 0.8rem 0;
+        }
+
+        h4, p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .date {
+            flex-basis: 100%;
+            padding-bottom: 0.3rem;
+
+        }
+
+        @media screen and (min-width: 460px) {
+            .date {
+                flex-basis: 112px;
+                padding-bottom: 0;
+            }
+            .announcement {
+                flex-basis: calc(100% - 112px);
+            }
         }
     }
 }
