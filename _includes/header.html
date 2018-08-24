@@ -3,10 +3,10 @@
   <div class="wrapper">
 
     {% if page.layout != "about" %}
-    <span class="site-title">
+    <a href="{{ site.baseurl }}" class="site-title">
         {% assign name = site.name | split: ' ' %}
         <strong>{{ name | first }}</strong> {{ name | last }}
-    </span>
+    </a>
     {% endif %}
 
     <nav class="site-nav">
